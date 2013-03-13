@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/registe.do" location="50,50" dimension="94,60" />
+  <StrutsActivity path="/registing.do" location="950,50" dimension="274,84" />
+  <StrutsActivity path="/uploading.do" location="350,250" dimension="274,84" />
+  <StrutsActivity path="/post.do" location="950,350" dimension="262,84" />
+  <StrutsActivity path="/login.do" location="50,350" dimension="82,60" />
+  <StrutsActivity path="/index.do" location="350,450" dimension="250,84" />
+  <StrutsActivity path="/details.do" location="650,550" dimension="262,84" />
+  <StrutsActivity path="/reply.do" location="50,550" dimension="250,84" />
+  <StrutsActivity path="/replying.do" location="350,750" dimension="268,84" />
+  <StrutsActivity path="/logout.do" location="950,750" dimension="256,84" />
+  <StrutsActivity path="/plat.do" location="50,850" dimension="244,84" />
+  <StrutsActivity path="/flatdetail.do" location="650,950" dimension="286,84" />
+  <StrutsActivity path="/registe.jsp" location="650,50" dimension="112,48" />
+  <StrutsActivity path="/success.jsp" location="650,150" dimension="112,48" />
+  <StrutsActivity path="/failue.jsp" location="50,250" dimension="106,48" />
+  <StrutsActivity path="/failure.jsp" location="950,250" dimension="112,48" />
+  <StrutsActivity path="/index.jsp" location="350,150" dimension="100,48" />
+  <StrutsActivity path="/detail.jsp" location="650,450" dimension="106,48" />
+  <StrutsActivity path="/reply.jsp" location="50,750" dimension="100,48" />
+  <StrutsActivity path="/flat.jsp" location="350,950" dimension="94,48" />
+  <StrutsActivity path="/flatdetail.jsp" location="950,1150" dimension="130,48" />
+  <StrutsActivity path="/registe.jdp" location="350,50" dimension="112,48" />
+  <StrutsActivity path="/replay.jsp" location="350,650" dimension="106,48" />
+  <StrutsActivity path="/backIndex.do" location="50,1050" dimension="106,60" />
+  <StrutsActivity path="/backIndex.jsp" location="1250,550" dimension="124,48" />
+  <StrutsActivity path="/backArticleList.do" location="1250,950" dimension="310,84" />
+  <StrutsActivity path="/backArticleList" location="1250,650" dimension="136,48" />
+  <StrutsActivity path="/backArticleList.jsp" location="350,1050" dimension="160,48" />
+  <StrutsActivity path="/backEditArticle.do" location="350,1150" dimension="322,84" />
+  <StrutsActivity path="/backEditArticle.jsp" location="1250,1150" dimension="160,48" />
+  <StrutsActivity path="/backDeleteArticle.do" />
+  <StrutsTransition id="/post.do,success,/success.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,392" />
+      <AbsolutePoint location="706,392" />
+      <AbsolutePoint location="706,198" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/replying.do,failure,/failure.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="618,792" />
+      <AbsolutePoint location="927,792" />
+      <AbsolutePoint location="927,313" />
+      <AbsolutePoint location="1006,313" />
+      <AbsolutePoint location="1006,298" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/backArticleList.do,success.jsp,/backArticleList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1405,1034" />
+      <AbsolutePoint location="1405,1074" />
+      <AbsolutePoint location="510,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/registing.do,success,/success.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1057,134" />
+      <AbsolutePoint location="1057,174" />
+      <AbsolutePoint location="762,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/flatdetail.do,success,/flatdetail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,failure,/failure.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="91,380" />
+      <AbsolutePoint location="1006,274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/index.do,failure,/failure.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="600,522" />
+      <AbsolutePoint location="867,522" />
+      <AbsolutePoint location="867,283" />
+      <AbsolutePoint location="950,283" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/backDeleteArticle.do,success,/backArticleList.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="1405,992" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/plat.do,success,/flat.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="294,892" />
+      <AbsolutePoint location="397,892" />
+      <AbsolutePoint location="397,950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/details.do,success,/detail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="741,550" />
+      <AbsolutePoint location="741,498" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/reply.do,success,/reply.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="135,634" />
+      <AbsolutePoint location="135,750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/backArticleList.do,success,/backArticleList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1405,1034" />
+      <AbsolutePoint location="1405,1074" />
+      <AbsolutePoint location="510,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/post.do,failure,/failure.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1047,350" />
+      <AbsolutePoint location="1047,298" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/uploading.do,failure,/failure.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="624,253" />
+      <AbsolutePoint location="950,253" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/backIndex.do,success,/backIndex.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="73,1110" />
+      <AbsolutePoint location="73,1363" />
+      <AbsolutePoint location="1635,1363" />
+      <AbsolutePoint location="1635,574" />
+      <AbsolutePoint location="1374,574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/index.do,success,/index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="475,492" />
+      <AbsolutePoint location="400,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/logout.do,success,/index.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1078,750" />
+      <AbsolutePoint location="1078,713" />
+      <AbsolutePoint location="475,713" />
+      <AbsolutePoint location="475,534" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/replying.do,success,/success.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,783" />
+      <AbsolutePoint location="315,783" />
+      <AbsolutePoint location="315,392" />
+      <AbsolutePoint location="676,392" />
+      <AbsolutePoint location="676,198" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/backArticleList.do,success.jsp,/backArticleList,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1371,950" />
+      <AbsolutePoint location="1371,698" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/registing.do,failure,/failue.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,125" />
+      <AbsolutePoint location="103,125" />
+      <AbsolutePoint location="103,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/login.do,success,/success.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="91,380" />
+      <AbsolutePoint location="706,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/backIndex.do,failure,/failure.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="103,1110" />
+      <AbsolutePoint location="103,1273" />
+      <AbsolutePoint location="1239,1273" />
+      <AbsolutePoint location="1239,274" />
+      <AbsolutePoint location="1062,274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/registe.do,null,/registe.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="97,50" />
+      <AbsolutePoint location="97,-25" />
+      <AbsolutePoint location="706,-25" />
+      <AbsolutePoint location="706,50" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/details.do,failure,/failure.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="781,550" />
+      <AbsolutePoint location="781,213" />
+      <AbsolutePoint location="1006,213" />
+      <AbsolutePoint location="1006,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/uploading.do,success,/success.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="487,250" />
+      <AbsolutePoint location="487,174" />
+      <AbsolutePoint location="650,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/backEditArticle.do,success,/backEditArticle.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="672,1213" />
+      <AbsolutePoint location="1330,1213" />
+      <AbsolutePoint location="1330,1198" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

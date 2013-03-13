@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.itworld.bbs.model">
+	<class name="BBS" table="article">
+		<id name="id">
+			<generator class="native"/>
+		</id>
+		<property name="pid"/>
+		<property name="rootid"/>
+		<property name="title"/>
+		<property name="content"/>
+		<property name="pdate"/>
+		<property name="isleaf"/>
+		<property name="hit"/>
+		<property name="replyNum"/>
+		
+		<many-to-one name="user" column="userid"/>
+		
+	</class>
+</hibernate-mapping>

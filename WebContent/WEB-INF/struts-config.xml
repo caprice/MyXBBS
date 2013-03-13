@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN" "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+  <form-beans>
+  
+  	<!-- 用户Form -->
+  	<form-bean name="userForm" type="com.itworld.bbs.form.UserForm"/>
+  	
+  	<!-- 头像上传Form -->
+  	<form-bean name="uploadForm" type="com.itworld.bbs.form.UploadForm"/>
+  	
+  	<!-- BBSForm -->
+  	<form-bean name="articleForm" type="com.itworld.bbs.form.ArticleForm"/>
+  	
+  	<!-- 分页form -->
+  	<form-bean name="pageForm" type="com.itworld.bbs.form.PageForm"/>
+  	
+  	<!-- 后台管理员登录form -->
+  	<form-bean name="adminForm" type="com.itworld.bbs.form.AdminForm"/>
+  	
+  </form-beans>
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings>
+  
+  	<!-- 用户注册跳转action -->
+  	<action path="/registe"
+  			forward="/registe.jsp"/>
+  	
+  	<!-- 用户注册action -->	
+  	<action path="/registing"
+  			type="com.itworld.bbs.action.RegistingAction"
+  			name="userForm"
+  			scope="request">
+  		<forward name="success" path="/success.jsp"/>	
+  		<forward name="failure" path="/failue.jsp"/>	
+  	</action>
+  	
+  	<!-- 头像上传action -->
+  	<action path="/uploading"
+  			type="com.itworld.bbs.action.UploadingAction"
+  			name="uploadForm"
+  			scope="request">
+  		<forward name="success" path="/success.jsp"/>
+  		<forward name="failure" path="/failure.jsp"/>		
+  	</action>
+  	
+  	<!-- 发表新主题action -->
+  	<action path="/post"
+  			type="com.itworld.bbs.action.PostingAction"
+  			name="articleForm"
+  			scope="request">
+  		<forward name="success" path="/success.jsp"/>
+  		<forward name="failure" path="/failure.jsp"/>	
+  	</action>
+  	
+  	<!-- 用户登录action -->
+  	<action path="/login"
+  			type="com.itworld.bbs.action.LoginAction"
+  			name="userForm"
+  			scope="request">
+  		<forward name="success" path="/success.jsp"/>
+  		<forward name="failure" path="/failure.jsp"/>		
+  	</action>
+  	
+  	<!-- 树形结构展现action -->
+  	<action path="/index"
+  			type="com.itworld.bbs.action.IndexAction"
+  			name="pageForm"
+  			scope="request">
+  		<forward name="success" path="/index.jsp"/>
+  		<forward name="failure" path="/failure.jsp"/>	
+  	</action>
+  	
+  	<!-- 帖子详细细节展现action -->
+  	<action path="/details"
+  			type="com.itworld.bbs.action.DetailsAction"
+  			name="articleForm"
+  			scope="request">
+  		<forward name="success" path="/detail.jsp"/>
+  		<forward name="failure" path="/failure.jsp"/>	
+  	</action>
+  	
+  	<!-- 回复帖子跳转action -->
+  	<action path="/reply"
+  			type="com.itworld.bbs.action.ReplyAction"
+  			name="articleForm"
+  			scope="request">
+  		<forward name="success" path="/reply.jsp"/>
+  	</action>
+  	
+  	<!-- 回复帖子action -->
+  	<action path="/replying"
+  			type="com.itworld.bbs.action.ReplyingAction"
+  			name="articleForm"
+  			scope="request">
+  		<forward name="success" path="/success.jsp"/>
+  		<forward name="failure" path="/failure.jsp"/>	
+  	</action>
+  	
+  	<!-- 注销action -->
+  	<action path="/logout"
+  			type="com.itworld.bbs.action.LogOutAction"
+  			scope="request">
+  		<forward name="success" path="/index.do"/>
+  	</action>
+  	
+  	<!-- 平板形式展现action -->
+  	<action path="/plat"
+  			type="com.itworld.bbs.action.FlatAction"
+  			name="pageForm"
+  			scope="request">
+  		<forward name="success" path="/flat.jsp"/>		
+  	</action>
+  	
+  	<!-- 平板详情展现action -->
+  	<action path="/flatdetail"
+  			type="com.itworld.bbs.action.FlatDetailsAction"
+  			name="articleForm"
+  			scope="request">
+  		<forward name="success" path="/flatdetail.jsp"/>	
+  	</action>
+  	
+  	<!-- 后台登陆action -->
+  	<action path="/backIndex"
+  			type="com.itworld.bbs.action.BackLoginAction"
+  			name="adminForm"
+  			scope="request">
+  		<forward name="success" path="/backIndex.jsp"/>
+  		<forward name="failure" path="/failure.jsp"/>
+  	</action>
+  	
+  	<!-- 全部帖子列表action -->
+  	<action path="/backArticleList"
+  			type="com.itworld.bbs.action.BackArticleListAction"
+  			scope="request">
+  		<forward name="success" path="/backArticleList.jsp"/>		
+  	</action>
+  			
+  	<!-- 查看帖子详情action -->
+  	<action path="/backEditArticle"
+  			type="com.itworld.bbs.action.BackArticleDetailAction"
+  			name="articleForm"
+  			scope="request">
+  		<forward name="success" path="/backEditArticle.jsp"/>		
+  	</action>
+  	
+  	<!-- 删除帖子action -->
+  	<action path="/backDeleteArticle"
+  			type="com.itworld.bbs.action.BackDeleteAction"
+  			name="articleForm"
+  			scope="request">
+  		<forward name="success" path="/backArticleList.do"/>		
+  	</action>
+  			
+  </action-mappings>
+  <message-resources parameter="com.itworld.bbs.ApplicationResources" />
+</struts-config>
+
